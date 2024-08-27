@@ -2,13 +2,14 @@ package org.estruturaDeDados.base;
 
 public class EstruturaEstatica <T>{
 
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
 
     public EstruturaEstatica(){
         this(10);
     }
 
+    @SuppressWarnings("unchecked")
     public EstruturaEstatica(int capacidade){
         this.elementos = (T[])new Object[capacidade];
         this.tamanho = 0;
@@ -22,6 +23,10 @@ public class EstruturaEstatica <T>{
             return true;
         }
         return false;
+    }
+
+    public boolean estaVazia(){
+        return tamanho == 0;
     }
 
     protected boolean adiciona(int posicao, T elemento){
@@ -41,7 +46,7 @@ public class EstruturaEstatica <T>{
         return true;
     }
 
-    private void aumentaCapacidade(){
+    protected void aumentaCapacidade(){
         if (this.tamanho == this.elementos.length){
             T[] elementosNovos = (T[])new Object[this.elementos.length * 2];
             for (int i=0; i<this.elementos.length; i++){
