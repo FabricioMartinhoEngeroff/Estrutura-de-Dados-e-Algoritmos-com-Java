@@ -8,12 +8,13 @@ public class PilhaTest {
         // Cria um vetor com capacidade para 3 elementos
        Pilha<Integer> pilha = new Pilha<Integer>();
 
-       for (int i=1; i<=10; i++){
-           pilha.empilhar(i);
-       }
 
         System.out.println(pilha);
-       System.out.println(pilha.tamanho());
+       System.out.println(pilha.estaVazia());
+
+       pilha.empilhar(1);
+
+        System.out.println(pilha.estaVazia());
 
     }
 }
