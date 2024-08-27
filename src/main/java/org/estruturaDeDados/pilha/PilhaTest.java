@@ -1,7 +1,5 @@
 package org.estruturaDeDados.pilha;
 
-import org.estruturaDeDados.contatoVetor.Vetor;
-
 public class PilhaTest {
 
     public static void main(String[] args) {
