@@ -6,6 +6,8 @@ public class ListaEncadeada<T> {
     private No<T> ultimo;
     private int tamanho;
 
+    private int naoEncotrado = -1;
+
     public void adiciona(T elemento) {
         No<T> celula = new No<>(elemento);
         if (tamanho == 0) {
@@ -17,9 +19,35 @@ public class ListaEncadeada<T> {
         this.tamanho++;
     }
 
-    public int getTamanho() {
-        return tamanho;
+    private No<T> buscaNo(int posicao){
+        if(posicao < 0 || posicao >= this.tamanho){
+            throw new IllegalArgumentException("Posição não encontrada");
+        }
+        No<T> noAtual = this.inicio;
+        for (int i = 0; i < posicao; i++){
+            noAtual = noAtual.getProximo();
+        }
+        return noAtual;
     }
+
+    public T buscaPorPosicao(int posicao){
+        return this.buscaNo(posicao).getElemento();
+    }
+
+    public int buscar (T elemento){
+        No<T> noAtual = this.inicio;
+        int posicao = 0;
+
+        while (noAtual != null){
+            if(noAtual.getElemento().equals(elemento)){
+                return posicao;
+            }
+            posicao++;
+            noAtual = noAtual.getProximo();
+        }
+        return naoEncotrado;
+    }
+
 
     public void limpa() {
 
@@ -37,6 +65,10 @@ public class ListaEncadeada<T> {
         this.tamanho = 0;
     }
 
+    public int getTamanho() {
+        return tamanho;
+    }
+
     @Override
     public String toString() {
 
@@ -45,7 +77,7 @@ public class ListaEncadeada<T> {
         if (this.tamanho == 0) {
             return "[]";
         }
-        No<T> atual = this.incio;
+        No<T> atual = this.inicio;
         for (int i = 0; i < this.tamanho - 1; i++) {
             builder.append(atual.getElemento()).append(",");
             atual = atual.getProximo();
@@ -54,5 +86,7 @@ public class ListaEncadeada<T> {
 
         return builder.toString();
     }
+
+
 }
 
