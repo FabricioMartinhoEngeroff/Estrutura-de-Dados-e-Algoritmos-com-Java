@@ -4,7 +4,8 @@ public class ListaEncadeadaTest {
 
     public static void main(String[] args) {
         // adicionaPosicao();
-        removeInicio();
+//        removeInicio();
+        removeFinal();
     }
 
 //    public static void adicionaPosicao() {
@@ -22,7 +23,20 @@ public class ListaEncadeadaTest {
 //        System.out.println(lista);
 //    }
 
-    public static void removeInicio() {
+//    public static void removeInicio() {
+//        ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+//
+//        lista.adiciona(1);
+//        lista.adiciona(2);
+//        lista.adiciona(4);
+//        lista.adiciona(5);
+//
+//        System.out.println("Elemento removido " + lista.removeInicio());
+//
+//        System.out.println(lista);
+//    }
+
+    public static void removeFinal() {
         ListaEncadeada<Integer> lista = new ListaEncadeada<>();
 
         lista.adiciona(1);
@@ -30,8 +44,18 @@ public class ListaEncadeadaTest {
         lista.adiciona(4);
         lista.adiciona(5);
 
-        System.out.println("Elemento removido " + lista.removeInicio());
+        System.out.println("Elemento removido " + lista.removeFinal());
+        System.out.println(lista);
 
+
+        System.out.println("Elemento removido " + lista.removeFinal());
+        System.out.println(lista);
+
+
+        System.out.println("Elemento removido " + lista.removeFinal());
+        System.out.println(lista);
+
+        System.out.println("Elemento removido " + lista.removeFinal());
         System.out.println(lista);
     }
 }

@@ -95,6 +95,24 @@ public class ListaEncadeada<T> {
         return removido;
   }
 
+  public T removeFinal() {
+      if (this.tamanho == 0) {
+          throw new RuntimeException("Lista vazia");
+      }
+      if (this.tamanho == 1) {
+          return this.removeInicio();
+      }
+      No<T> penultimoNo = this.buscaNo(this.tamanho - 2);
+      T removido = penultimoNo.getProximo().getElemento();
+      penultimoNo.setProximo(null);
+      this.ultimo = penultimoNo;
+      tamanho--;
+
+      return removido;
+
+
+  }
+
     public void limpa() {
 
         for (No<T> atual = this.inicio; atual != null; ) {
