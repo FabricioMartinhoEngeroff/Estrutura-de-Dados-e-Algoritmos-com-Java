@@ -10,12 +10,10 @@ public class  Gaveteiro {
         this.brinquedos = new LinkedList<>();
     }
 
-    // Adiciona um brinquedo no final da lista
     public void adicionarBrinquedo(String brinquedo) {
         brinquedos.add(brinquedo);
     }
 
-    // Adiciona um brinquedo em uma posição específica
     public void adicionarBrinquedo(int posicao, String brinquedo) {
         if (posicao >= 0 && posicao <= brinquedos.size()) {
             brinquedos.add(posicao, brinquedo);
@@ -24,12 +22,10 @@ public class  Gaveteiro {
         }
     }
 
-    // Remove o brinquedo pelo nome
     public boolean removerBrinquedo(String brinquedo) {
         return brinquedos.remove(brinquedo);
     }
 
-    // Remove o brinquedo em uma posição específica
     public String removerBrinquedo(int posicao) {
         if (posicao >= 0 && posicao < brinquedos.size()) {
             return brinquedos.remove(posicao);
@@ -39,7 +35,6 @@ public class  Gaveteiro {
         }
     }
 
-    // Obtém um brinquedo em uma posição específica
     public String obterBrinquedo(int posicao) {
         if (posicao >= 0 && posicao < brinquedos.size()) {
             return brinquedos.get(posicao);
@@ -49,12 +44,10 @@ public class  Gaveteiro {
         }
     }
 
-    // Verifica se a gaveta contém um brinquedo específico
     public boolean contemBrinquedo(String brinquedo) {
         return brinquedos.contains(brinquedo);
     }
 
-    // Imprime todos os brinquedos na gaveta
     public void listarBrinquedos() {
         if (brinquedos.isEmpty()) {
             System.out.println("A gaveta está vazia.");
@@ -65,12 +58,10 @@ public class  Gaveteiro {
         }
     }
 
-    // Retorna a quantidade de brinquedos na gaveta
     public int quantidadeDeBrinquedos() {
         return brinquedos.size();
     }
 
-    // Limpa todos os brinquedos da gaveta
     public void limparGaveta() {
         brinquedos.clear();
     }
