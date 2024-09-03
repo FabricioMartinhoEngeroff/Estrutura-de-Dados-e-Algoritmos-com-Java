@@ -5,7 +5,8 @@ public class ListaEncadeadaTest {
     public static void main(String[] args) {
         // adicionaPosicao();
 //        removeInicio();
-        removeFinal();
+        //removeFinal();
+        removePosicao();
     }
 
 //    public static void adicionaPosicao() {
@@ -36,7 +37,30 @@ public class ListaEncadeadaTest {
 //        System.out.println(lista);
 //    }
 
-    public static void removeFinal() {
+//    public static void removeFinal() {
+//        ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+//
+//        lista.adiciona(1);
+//        lista.adiciona(2);
+//        lista.adiciona(4);
+//        lista.adiciona(5);
+//
+//        System.out.println("Elemento removido " + lista.removeFinal());
+//        System.out.println(lista);
+//
+//
+//        System.out.println("Elemento removido " + lista.removeFinal());
+//        System.out.println(lista);
+//
+//
+//        System.out.println("Elemento removido " + lista.removeFinal());
+//        System.out.println(lista);
+//
+//        System.out.println("Elemento removido " + lista.removeFinal());
+//        System.out.println(lista);
+//    }
+
+    public static void removePosicao() {
         ListaEncadeada<Integer> lista = new ListaEncadeada<>();
 
         lista.adiciona(1);
@@ -44,19 +68,9 @@ public class ListaEncadeadaTest {
         lista.adiciona(4);
         lista.adiciona(5);
 
-        System.out.println("Elemento removido " + lista.removeFinal());
-        System.out.println(lista);
+        System.out.println("Elemento removido " + lista.removePosicao(1));
+      System.out.println(lista);
 
-
-        System.out.println("Elemento removido " + lista.removeFinal());
-        System.out.println(lista);
-
-
-        System.out.println("Elemento removido " + lista.removeFinal());
-        System.out.println(lista);
-
-        System.out.println("Elemento removido " + lista.removeFinal());
-        System.out.println(lista);
     }
 }
 
