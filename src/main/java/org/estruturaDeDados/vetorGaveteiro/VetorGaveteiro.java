@@ -1,6 +1,6 @@
-package org.estruturaDeDados.vetorGavetas;
+package org.estruturaDeDados.vetorGaveteiro;
 
-public class Gaveteiro {
+public class VetorGaveteiro {
 
     // Array que representa as gavetas do gaveteiro
     private String[] gavetas;
@@ -9,7 +9,7 @@ public class Gaveteiro {
     private int quantidadeDeBrinquedos;
 
     // Construtor que cria um gaveteiro com um número específico de gavetas
-    public Gaveteiro(int capacidade) {
+    public VetorGaveteiro(int capacidade) {
         // Inicializa as gavetas com o tamanho especificado
         this.gavetas = new String[capacidade];
 

@@ -1,10 +1,10 @@
-package org.estruturaDeDados.vetorGavetas;
+package org.estruturaDeDados.vetorGaveteiro;
 
 public class MainGaveteiro {
 
         public static void main(String[] args) {
             // Cria um gaveteiro com capacidade para 5 brinquedos
-            Gaveteiro gaveteiro = new Gaveteiro(5);
+            VetorGaveteiro gaveteiro = new VetorGaveteiro(5);
 
             // Adiciona brinquedos ao gaveteiro
             gaveteiro.adicionarBrinquedo("Carro", 0);
