@@ -1,4 +1,4 @@
-package org.estruturaDeDados.vetorMultidimencional.registroProfessor;
+package org.estruturaDeDados.vetorUnidimensional.registroProfessor;
 
 public class Professor {
 

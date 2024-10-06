@@ -1,4 +1,4 @@
-package org.estruturaDeDados.matrizUnidimencional;
+package org.estruturaDeDados.matrizBidimensional;
 
 import java.util.Scanner;
 

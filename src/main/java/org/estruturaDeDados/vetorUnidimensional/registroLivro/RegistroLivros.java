@@ -1,4 +1,4 @@
-package org.estruturaDeDados.vetorMultidimencional.livro;
+package org.estruturaDeDados.vetorUnidimensional.registroLivro;
 
 import java.util.Scanner;
 

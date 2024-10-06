@@ -1,4 +1,4 @@
-package org.estruturaDeDados.matrizHeterogeneas.registroAluno;
+package org.estruturaDeDados.matrizHeterogeneas;
 
 import java.util.Scanner;
 
